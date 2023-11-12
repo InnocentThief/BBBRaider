@@ -16,6 +16,8 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BBB.DataAccess.Repository\BBB.DataAccess.Repository.csproj" />
+	  <ProjectReference Include="..\BBB.Framework.Conversion\BBB.Framework.Conversion.csproj" />
+	  <ProjectReference Include="..\BBB.Framework.Dto\BBB.Framework.Dto.csproj" />
 	</ItemGroup>
 
 </Project>

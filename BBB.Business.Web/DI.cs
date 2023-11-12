@@ -1,4 +1,5 @@
-﻿using BBB.DataAccess.Repository;
+﻿using BBB.Business.Web.Core;
+using BBB.DataAccess.Repository;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BBB.Business.Web
@@ -8,7 +9,10 @@ namespace BBB.Business.Web
         public static IServiceCollection AddWebDomains(this IServiceCollection services)
         {
             return services
-                .AddWebRepositories();
+                .AddWebRepositories()
+                .AddSingleton<IPlayerDomain, PlayerDomain>()
+                .AddSingleton<IRaidDomain, RaidDomain>()
+                .AddSingleton<IScheduleDomain, ScheduleDomain>();
         }
     }
 }

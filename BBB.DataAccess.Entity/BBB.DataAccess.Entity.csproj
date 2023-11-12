@@ -1,9 +1,16 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="BBB.Business.Web" />
+		<InternalsVisibleTo Include="BBB.DataAccess.Model" />
+		<InternalsVisibleTo Include="BBB.DataAccess.Repository" />
+		<InternalsVisibleTo Include="BBB.Framework.Conversion" />
+	</ItemGroup>
 
 </Project>

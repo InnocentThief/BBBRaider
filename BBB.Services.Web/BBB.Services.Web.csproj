@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BBB.Business.Web\BBB.Business.Web.csproj" />
+    <ProjectReference Include="..\BBB.Framework.Dto\BBB.Framework.Dto.csproj" />
   </ItemGroup>
 
 </Project>

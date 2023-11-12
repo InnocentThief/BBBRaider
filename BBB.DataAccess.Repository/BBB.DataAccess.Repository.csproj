@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
@@ -11,11 +11,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="7.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\BBB.DataAccess.Model\BBB.DataAccess.Model.csproj" />
+		<ProjectReference Include="..\BBB.DataAccess.Entity\BBB.DataAccess.Entity.csproj" />
+		<ProjectReference Include="..\BBB.DataAccess.Model\BBB.DataAccess.Model.csproj" />
 	</ItemGroup>
 
 </Project>

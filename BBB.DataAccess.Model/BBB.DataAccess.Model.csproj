@@ -14,4 +14,8 @@
 		<InternalsVisibleTo Include="BBB.DataAccess.Repository" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\BBB.DataAccess.Entity\BBB.DataAccess.Entity.csproj" />
+	</ItemGroup>
+
 </Project>

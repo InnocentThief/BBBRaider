@@ -1,4 +1,5 @@
 ﻿using BBB.DataAccess.Model;
+using BBB.DataAccess.Repository.Core;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace BBB.DataAccess.Repository
@@ -8,7 +9,10 @@ namespace BBB.DataAccess.Repository
         public static IServiceCollection AddWebRepositories(this IServiceCollection services)
         {
             return services
-                .AddModel();
+                .AddModel()
+                .AddSingleton<IPlayerRepository, PlayerRepository>()
+                .AddSingleton<IRaidRepository, RaidRepository>()
+                .AddSingleton<IScheduleRepository, ScheduleRepository>();
         }
     }
 }

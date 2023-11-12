@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BBB.DataAccess.Entity.Core.Raid">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAACAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Raid.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Encounters" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.Encounter">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAABAAAAAAAACAgAAAAAAQAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Core\Encounter.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Raid" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Positions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.EncounterPosition">
+    <Position X="10.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAAAgAAAAAAAAAAQAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Core\EncounterPosition.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Encounter" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.Player">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.Schedule">
+    <Position X="3.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAACAAAAAAAAAAAQAQAAABACAAAAAAAQA=</HashCode>
+      <FileName>Core\Schedule.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="RaidLeader" />
+      <Property Name="Raid" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Participants" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.Participant">
+    <Position X="3.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQgGEAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>Core\Participant.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Player" />
+      <Property Name="Schedule" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="EncounterPositions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="BBB.DataAccess.Entity.Core.RaidPlayerEncounterPosition">
+    <Position X="9.75" Y="5.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAgCIAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Core\EncounterPositionParticipant.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EncounterPosition" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
