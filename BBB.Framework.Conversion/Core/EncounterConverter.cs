@@ -10,8 +10,12 @@ namespace BBB.Framework.Conversion.Core
             return new EncounterDto
             {
                 Positions = entity.Positions.ToDtos(),
+                Danger = entity.Danger,
+                Description = entity.Description,
                 EncounterKey = entity.EncounterKey,
+                Fight = entity.Fight,
                 Name = entity.Name,
+                Preparation = entity.Preparation,
                 RaidKey = entity.RaidKey,
                 SortOrder = entity.SortOrder
             };

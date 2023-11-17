@@ -7,8 +7,12 @@ import {
 import { EncounterPositionDto } from './EncounterPositionDto'
 
 export class EncounterDto {
-  enconterKey: string = ''
+  encounterKey: string = ''
   name: string = ''
+  description: string = ''
+  preparation: string = ''
+  fight: string = ''
+  danger: string = ''
   sortOrder: number = 0
   raidKey: string = ''
   positions: EncounterPositionDto[] = []
@@ -20,8 +24,12 @@ export class EncounterDto {
     }
 
     return {
-      enconterKey: parseString(obj.EncounterDto),
+      encounterKey: parseString(obj.encounterKey),
       name: parseString(obj.name),
+      description: parseString(obj.description),
+      preparation: parseString(obj.preparation),
+      fight: parseString(obj.fight),
+      danger: parseString(obj.danger),
       sortOrder: parseNumber(obj.sortOrder),
       raidKey: parseString(obj.raidKey),
       positions: parseArray(obj.positions, EncounterPositionDto.fromJSON),

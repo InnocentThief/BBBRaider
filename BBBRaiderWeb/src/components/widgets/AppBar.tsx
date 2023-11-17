@@ -2,6 +2,7 @@ import { Alignment, Button, Classes, Navbar } from '@blueprintjs/core'
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { SCHEDULES_ROUTE } from '../../App'
 // import styled from 'styled-components'
 
 class AppBar extends React.Component {
@@ -21,11 +22,11 @@ class AppBar extends React.Component {
                             </Link>
                         </Navbar.Heading>
                         <Navbar.Divider />
-                        <Link to='/SilentRaids'>
+                        <Link to={SCHEDULES_ROUTE}>
                             <Button
                                 className={Classes.MINIMAL}
                                 icon='timeline-events'
-                                text='Raids'
+                                text='Raidplaner'
                                 title='Raidplaner'
                             />
                         </Link>

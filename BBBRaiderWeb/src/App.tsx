@@ -12,10 +12,8 @@ import { Classes } from '@blueprintjs/core'
 import Raids from './components/routes/Raids'
 import Raid from './components/routes/Raid'
 import Hub from './components/routes/Hub'
-import AdvancedRaids from './components/routes/AdvancedRaids'
 
-export const SILENTRAID_ROUTE = '/SilentRaids'
-export const ADVANCEDRAID_ROUTE = '/AdvancedRaids'
+export const SCHEDULES_ROUTE = '/schedules'
 
 class App extends React.Component {
   render() {
@@ -27,9 +25,8 @@ class App extends React.Component {
           <Main>
             <Routes>
               <Route path='/' element={<Hub />} />
-              <Route path={SILENTRAID_ROUTE} element={<Raids />} />
-              <Route path={`${SILENTRAID_ROUTE}/:scheduleKey`} element={<Raid />} />
-              <Route path={ADVANCEDRAID_ROUTE} element={<AdvancedRaids />} />
+              <Route path={SCHEDULES_ROUTE} element={<Raids />} />
+              <Route path={`${SCHEDULES_ROUTE}/:scheduleKey`} element={<Raid />} />
             </Routes>
           </Main>
         </Content>

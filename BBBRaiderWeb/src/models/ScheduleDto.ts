@@ -1,12 +1,13 @@
 import {
   logTypeMissmatch,
+  parseArray,
   parseDate,
   parseNumber,
   parseString,
 } from '../helpers/model'
+import { ParticipantDto } from './ParticipantDto'
 import { PlayerDto } from './PlayerDto'
 import { RaidDto } from './RaidDto'
-// import { RaidDto } from './RaidDto'
 
 export class ScheduleDto {
   scheduleKey: string = ''
@@ -17,6 +18,7 @@ export class ScheduleDto {
   raidLeader?: PlayerDto
   raidKey: string = ''
   raid?: RaidDto
+  participants: ParticipantDto[] = []
 
   static fromJSON(obj: any): ScheduleDto {
     if (!obj) {
@@ -33,6 +35,7 @@ export class ScheduleDto {
       raidLeader: PlayerDto.fromJSON(obj.raidLeader),
       raidKey: parseString(obj.raidKey),
       raid: RaidDto.fromJSON(obj.raid),
+      participants: parseArray(obj.participants, ParticipantDto.fromJSON),
     }
   }
 }
